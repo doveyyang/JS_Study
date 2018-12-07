@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 构造函数
+        // 原型对象中方法中的this就是实例对象
+        // function Person(age){
+        //     this.age = age  
+        //     console.log(this)
+        // }
+
+        // // 原型方法
+        // Person.prototype.eat =function(){
+        //     console.log(this)
+        //     console.log('您吃了没，吃点东西去')
+        // }
+        // var per = new Person(20)
+        // per.eat()
+        // console.log(per)
+
+        
+        
+        // function Student(){
+        // }
+        // Student.prototype.study =function(){
+        //     console.log('学习编程')
+        // }
+                
+        // Student.prototype = {  //改变的原型的指向
+        //     eat:function(){
+        //         console.log('好好吃的榴莲')
+        //     }
+        // };
+
+        // var stu = new Student();
+        // stu.eat();
+
+
+        //原型指向可以改变
+        function Student(){
+        }
+        Student.prototype.study = function(){
+            console.log('student 的study')
+        }
+
+        function Person(age){
+            this.age = age;
+        }        
+        Person.prototype.eat =function(){
+            console.log('person 的eat')
+        }
+
+        Student.prototype = new Person(10)  //学生的原型，指向了一个人的实例对象
+        
+        var stu = new Student()
+        // stu.study()
+        stu.eat()
+
+        //原型指向可以改变
+        //实例对象的原型__proto__指向的是该对象所在的构造函数的原型对象
+        //构造函数的原型对象（prototype）指向如果改变了，实例对象的原型（__proto__)指向也会发生改变
+
+        //原型的指向是可以改变的
+        //实例对象和原型对象之间的关系是通过_proto__原型联系起来的，这个关系就是原型链
+
+    </script>
+</body>
+</html>

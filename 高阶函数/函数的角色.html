@@ -7,6 +7,35 @@
     <title>Document</title>
 </head>
 <body>
+    <script>
+    // 函数声明 如果放在if-else的语句中，在IE8的浏览器中会出现问题
+    // if()
+    // 以后宁愿用函数表达式，都不用函数声明
+    var ff = function(){
+
+    }
+
+
+    //
+    /*
+        函数中的this的指向  -- window
+        普通函数 的this是 -- 实例对象
+        对象.方法中的this是 -- 实例对象
+        定时器方法中的this是  -- window
+        构造函数中的this是 -- 实例对象
+        原型对象方法中的this是 -- 实例对象
+    */
+
     
+    //BOM中顶级对象是window,浏览器中的this是window的
+
+    //严格模式
+    // function f1
+    'use strict'
+    function f1(){
+        console.log(this)
+    }
+    f1()
+    </script>
 </body>
 </html>

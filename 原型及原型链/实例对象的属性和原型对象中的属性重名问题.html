@@ -7,6 +7,26 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+    function Person(sex){
+        this.sex  = sex
+    }
+    Person.prototype.sex = '男'
+    var per = new Person('女')
+    console.log(per.sex)
+    per.__proto__.sex = '女'
+    console.dir(per)
+    // console.dir(Person)
+    // 实例对象访问这个属性，应该先从实例对象中找，找到了就直接用，找不到就去指向的原型对象中找，找到了就使用，找不到？
+    // 通过实例对象能否改变原型对象中的值呢？不能
+    // 希望改变原型对象中的属性的值，怎么办？ 通过构造函数的原型方法修改，eg:Person.prototype.sex = '女'
+
+    // 因为JS是一门动态类型的语言，对象没有什么，只要点了，那么这个对象就有了这个东西，没有这个属性，
+    // 只要对象.属性名称，对象就有这个属性了，但是因为没有对它赋值，所以结果是undefined
+    console.log(per.dfafgafasf) //undefined
+
+    console.log(dafwegfw) // 报错
+
+    </script>
 </body>
 </html>

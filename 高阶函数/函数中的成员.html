@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 函数中有一个name属性 , 只读的属性
+        // 函数中有一个arguments属性--》实参的个数
+        // 函数中有一个length属性，--》形参的个数
+        function f1(x,y){
+            console.log(f1.name)
+            console.log(f1.arguments.length)
+            console.log(f1.length)
+            console.log(f1.caller)  // 函数的调用者
+
+        }
+        // f1(10,20)
+        // f1.name = 'f5';        
+        f1(10,20,30,50)
+        console.dir(f1)
+
+        function f2(){
+            console.log('f2.....')
+            f1(10,20)
+        }
+        f2()
+
+    </script>
+</body>
+</html>

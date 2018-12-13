@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        // 创建对象的三种方式: 1 字面量方式 2 调用系统的构造函数 3 自定义构造函数
+        // 1 字面量
+        var obj = {
+            age:10,
+            sex:'男',
+            sayHi:function(){
+                console.log('您好，今天happy吗？')
+            }
+        }
+
+        // 2 调用系统的构造函数创建对象
+        var obj2 = new Object()
+        obj2.age = 20
+        obj2.sex = 'male'
+        obj2.sayHi = function(){
+            console.log('say hi ')
+        }
+
+        // 3 自定义构造函数创建对象
+        function Person(age,sex){
+            this.age = age
+            this.sex = sex
+            this.sayHi = function(){
+                console.log('say hi')
+            }
+        }
+        
+        // 原型链：实例对象和原型对象之间的关系，主要是通过__proto__和prototype来联系
+
+        // 原型的指向是可以改变，所以JS中是通过改变原型来实现继承的
+        // 原型的作用：实现数据共享，继承，都是为了节省内存空间
+        function Animal(age,sex){
+            this.age = age
+            this.sex = sex
+        }
+
+        Animal.prototype.color = 'yellow'
+        // 通过原型添加方法
+        Animal.prototype.eat = function(){
+            console.log('中秋的时候没用吃到月饼，但是吃了馒头，也是一样')
+        }
+        
+        // 小狗的构造函数
+        function Dog(age,sex,name){
+            this.name = name
+            // 借用构造函数
+            Animal.call(this,age,sex)
+        }
+
+        // 改变原型指向
+        Dog.prototype = new Animal();
+
+        var dog = new Dog(10,'女','小猪')
+        console.log(dog.name)
+        console.log(dog.age)
+        console.log(dog.sex)
+        console.log(dog.color)
+        // 调用方法
+        dog.eat()
+
+
+    </script>
+</body>
+</html>

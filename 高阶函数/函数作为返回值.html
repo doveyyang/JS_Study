@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function f1(){
+        //     console.log('f1函数开始')
+        //     return function(){
+        //         console.log('我是一个函数，但是我也是一个返回值')
+        //     }
+        //     console.log('f1函数结束')
+        // }
+
+        // var ff = f1()
+        // ff()
+
+        // var num = 10
+        // console.log(typeof num) // 获取num这个变量的数据类型
+            
+        // var obj = {}
+
+        // // 判断这个对象是不是某个类型
+        // console.log(obj instanceof Object)
+
+        // // 获取某个对象的数据类型的样子
+        // Object.prototype.toString().call(对象)
+
+        // // 输出的是Object的数据类型    [object Object]
+        // console.log(Object.prototype.toString())
+        // // 输出的是数组的数据类型 [object Array]
+        // console.log(Object.prototype.toString.call([]))
+
+        //  var arr = [10,20,30]
+        //  console.log(Object.prototype.toString.call(arr)) //函数借用
+            
+        // console.log(Object.prototype.toString().call(new Date()))
+
+        // 获取某个对象的类型是不是你传入的类型
+        // [10,20,30] 是不是[object Array]
+        // type 是变量-是参数--'[object Array]'
+        // obj --- 是变量--是参数
+        // function getFunc(type){
+        //     return function(obj){  //函数作为返回值来使用
+        //         return Object.prototype.toString.call(obj) === type
+        //     }
+        // }
+        // var ff = getFunc("[object Array]")
+        // var result = ff([10,20,30])
+        // console.log(result)
+
+        // var ff1 = getFunc("[object Object]") // 参数是字符串样子的类型
+        // var result2 = ff1(new Date()) //[object Date]
+        // console.log(result2)
+
+        // 判断这个对象和传入的类型是不是同一类型
+
+        //练习
+
+        // var arr = [1,100,20,200,40,50,120,10]
+
+        // arr.sort()
+        // console.log(arr)
+
+        // var arr = [1,100,20,200,40,50,120,10]
+
+        // arr.sort(function(obj1,obj2){
+        //     //排序：函数作为参数来使用 ， 匿名函数作为sort方法的参数使用，那么此时的匿名函数中有两个参数
+        //     if(obj1 > obj2) return -1
+        //     else if(obj1 == obj2) return 0
+        //     else return 1
+        // })
+
+        // console.log(arr)
+
+            // var arr = ['acdef','abcd','bcedf','bced']
+            // arr.sort(function(a,b){
+            //     if(a>b){
+            //         return 1
+            //     }else if(a==b){
+            //         return 0
+            //     }else{
+            //         return -1
+            //     }
+            // })
+            // console.log(arr)
+
+            
+
+    </script>
+</body>
+</html>

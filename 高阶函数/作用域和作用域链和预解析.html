@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 变量---》局部变量和全局变量
+        // 作用域:变量的使用范围
+        // 局部作用域和全局作用域
+        // JS中没有块级作用域--一对括号中定义的变量，这个变量可以在大括号外使用
+        // 函数中定义的变量是局部变量
+        // if(true){
+        //     var num = 10  //全局变量
+        // }
+        // console.log(num)
+
+        // 作用域链：变量的使用，从里向外，层层的搜索，搜索到了就可以直接使用了
+        // 如果搜索到级别0仍没找到，这报错
+        // var num = 10 // 作用域链 级别：0
+        // function f1(){
+        //     var num = 20; // 作用域链 级别：1
+        //     function f2(){
+        //         var num = 30 // 作用域链 级别：2 
+        //         console.log(num) //
+        //     }
+        //     f2()
+        // }
+        // f1()
+            
+        // 预解析：就是在浏览器解析代码之前，把变量的声明和函数的声明提前到该作用域的最上面
+        // 变量的提升 - 仅仅提前了声明，但是赋值没提前，
+        // console.log(num) //undefined
+        // var num = 100;
+
+        // 函数的声明被提前了
+        // f1()
+        // function f1(){
+        //     console.log('这个函数，执行了')
+        // }
+
+        f2() // 报错，因为仅仅把f2这个变量的声明提前了
+        var f2 = function(){
+            console.log('heheda')
+        }
+
+
+
+    </script>
+</body>
+</html>

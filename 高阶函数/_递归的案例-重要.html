@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        // // 求n个数字的和，计算1+2+3+4+5的值
+        // // var sum = 0;
+        // // for (let i = 0; i <= 5; i++) {
+        // //     sum+=i;         
+        // // }
+        // // console.log(sum)
+
+        // // 递归实现：求n个数字的和 5-> 5+4+3+2+1
+        // // 函数的声明
+        // function getSum(x){
+        //     if(x==1){
+        //         return 1;
+        //     }
+        //     return x + getSum(x-1)
+        // }
+        // // 函数的调用
+        // console.log(getSum(5))
+
+        // /* 代码执行getSum(5)--> 进入函数，此时的x是5，执行的是5+getSum(4),此时代码等待
+        //     此时的5+getSum(4),代码先不进行计算，先执行getSum(4),进入函数，执行的是4+getSum(3),等待
+        //     ，先执行的是getSum(3),进入函数，执行的是3+getSum(2)，等待
+
+        // */
+
+        // 求一个数字上的各个位数上的数字的和：123---》6 --- 1+2+3 = 6
+        // function getEverySum(x){
+        //     if(x <10){
+        //         return x
+        //     }
+        //     return getEverySum(parseInt(x/10)) + x%10;
+        // }
+
+        // console.log(getEverySum(236))
+
+        // 递归案例:求斐波那契数列
+        function getFib(x){
+            if(x == 1 || x == 2 ){
+                return 1;
+            }
+            return getFib(x-1)+getFib(x-2);
+        }
+        console.log(getFib(12))
+
+    </script>
+</body>
+</html>

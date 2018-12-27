@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>div</div>
+    <div>div</div>
+    <div>div</div>
+    <p>p</p>
+    <p>p</p>
+    <p>p</p>
+    <script>
+        var getTag = 10;
+        var dvObjs = 20;
+        var pvObjs = 30;
+        (function(){
+            function getTag(tagName){
+                    return document.getElementsByTagName(tagName)
+                }
+
+                //获取所有的div
+                var dvObjs = getTag('div')
+                for (let i = 0; i < dvObjs.length; i++) {
+                    // const element = dvObjs[i];
+                    dvObjs[i].style.border = '2px solid pink';            
+                }
+
+                var pvObjs = getTag('p')
+                for (let i = 0; i < pvObjs.length; i++) {
+                    // const element = dvObjs[i];
+                    pvObjs[i].style.border = '2px solid pink';            
+                }
+        }())
+
+        console.log(getTag)
+        console.log(dvObjs)
+        console.log(pvObjs)
+        
+    </script>
+</body>
+</html>

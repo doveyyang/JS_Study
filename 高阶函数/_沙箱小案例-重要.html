@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // 所有的代码都放在自己的沙箱里，以免变量冲突等
+        (function(){
+            var str = '小白喜欢小花'
+            str = str.substr(2);
+            console.log(str);
+        }());
+        
+
+        (function(){
+            var str = '你好啊我是函数一';
+            console.log(str);
+        }());
+
+        (function(){
+            var str = '我是函数二';
+            console.log(str);
+        }());
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 静态方法Promise.resolve(value) 是new Promise的快捷方式
+
+        new Promise(function(resolve){
+            resolve(42)
+        })
+
+        // 改进为：
+        Promise.resolve(42) // promise对象立即进入resolve状态，并将42传递给后面的then里所指定的onfullfilled函数
+
+        // 方法 Promise.resolve(value)的返回值也是一个promise对象，所以我们可以像下面那样接着对其返回值进行调用
+        Promise.resolve(42).then(function(value){
+            console.log(value)
+        })
+
+    </script>
+</body>
+</html>

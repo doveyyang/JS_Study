@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 通过遍历，进行浅拷贝
+        var obj1 = {
+            name:'dovey',
+            age:16,
+            say:function(){
+                console.log('say')
+            }
+        }
+        var obj2 = {}
+
+        // 将obj1中的所有的属性复制到obj2中
+        function extend(obj1,obj2){
+            for(let key in obj1){
+                obj2[key] = obj1[key]
+            }
+        }
+        extend(obj1,obj2)
+        console.log(obj1,obj2)
+    </script>
+</body>
+</html>

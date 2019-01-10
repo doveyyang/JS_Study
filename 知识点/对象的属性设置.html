@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 对象的属性 设置/获取属性 
+        // . [] 区别： .是取自身的属性 []可以是变量
+        // var obj = {}
+        // obj.name = 'dovey'
+        // obj['age'] = 18;
+        // console.log(obj['name'])
+
+        // // 实例
+        // var o = {
+        //     name:'xyz',
+        //     age:18
+        // }
+        // var a = 'name'
+        // console.log(o[a]) // a是一个变量
+
+        // 删除属性
+        // var o  = {
+        //     name:'xyz',
+        //     age:18
+        // }
+
+        // delete o.name;
+        // delete o['age']
+        // console.log(o)
+        // var o3 = {a:'1',b:'2',c:'3'}
+        // var value = 'a'
+        // delete o3[value]
+        // console.log(o3)
+
+        // 检测属性
+        // var o4 = {a:'1',b:'2',c:'3'}
+        // // 1. in 运算符 判断对象中的属性是否存在
+        // console.log('c' in o4) // true
+        // console.log('m' in o4) // false
+
+        // 2. 使用对象的hasOwnProperty()方法
+        // var o4 = {a:'1',b:'2',c:'3'}
+        // console.log(o4.hasOwnProperty('a'))
+        // var type = 'b'
+        // o4.hasOwnProperty(type)
+
+        // 3. !=undefined
+        // var o4 = {a:'1',b:'2',c:'3'}
+        // console.log(o4.a != undefined)  // 判断对象的属性是否是undefined
+
+        // 属性的遍历
+        // var o5 = {a:'1',b:'2',c:'3'}
+        // var arr= [1,2,3,4,5]
+
+        // for (var k in o5) { // k 是变量  o5是对象
+        //     console.log(k) // 取属性的键
+        //     console.log(o5[k]) // 取属性的值
+        // }
+
+        // // 数组
+        // for(var v in arr){
+        //     console.log(v)
+        //     console.log(arr[v])
+        // }
+
+        // forEach 无返回值
+        var arr= ['x','y','z','w']
+        // arr.forEach(function(item,index,input){
+        //     console.log(item)  // 当前的元素
+        //     console.log(index) // 索引
+        //     console.log(input) // 数组 arr
+        // })
+
+        // map 回调函数中支持return返回值
+        // var res = arr.map(function(item,index,input){
+        //     console.log(item)  // 当前的元素
+        //     console.log(index) // 索引
+        //     console.log(input) // 数组 arr
+        //     return item + '1'
+        // })
+        // console.log(res)
+
+        // 序列化
+        // var data = {
+        //     name:'123',
+        //     content:'123456'
+        // };
+        // // JSON.stringify(data) // 对象转字符串
+        // // JSON.parse() //JSON字符串转对象
+
+        // console.log(typeof JSON.stringify(data))
+        // var str = JSON.stringify(data)
+        // console.log(typeof JSON.parse(str))
+
+        // 深拷贝 浅拷贝（引用）
+        // var arr1 = ['a','b']
+        // var arr2 = arr1.slice()
+        // console.log(arr1)
+        // console.log(arr2)
+
+        // arr2[1] = 'c'
+        // console.log(arr1)
+        // console.log(arr2)
+        // 此时修改arr2的修改并没用影响到arr1
+
+        // var arr1 = ['a','b',['c','d']]
+        // var arr2 = arr1.concat(); // 可以进行深拷贝
+        // arr2[2][1] = '100'
+
+        // console.log(arr1)
+        // console.log(arr2)
+
+        var obj = {
+            name:'sonia',
+            age:18
+        }
+        var obj2 = new Object()
+        obj2.name = obj.name
+        obj2.age = obj.age
+        console.log(obj2)
+        //
+        var obj3 = JSON.parse(JSON.stringify(obj))
+        obj3.name='test'
+        console.log(obj3)
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+    </script>
+</body>
+</html>
